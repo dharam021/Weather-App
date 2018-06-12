@@ -30,7 +30,7 @@ SECRET_KEY = '#5$ja82%n3xeao4u2a)o6&+az$nlg*4&8)a7a2dd*2-41og@xq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost','https://pure-temple-93847.herokuapp.com/']
 
 
 # Application definition
