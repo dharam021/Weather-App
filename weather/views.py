@@ -11,7 +11,7 @@ def get_cur_weather():
 	lat = r['latitude']
 	lon = r['longitude']
 	city = r['region_name']
-	cur_url = 'http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&units=metric&appid=0a2fad4d1a793d6c2d3cec6944844da2'
+	cur_url = "http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&units=metric&appid='Your API Key'"
 	r = requests.get(cur_url.format(lat,lon)).json()
 	city_weather = {
 			'temperature':r['main']['temp'],
@@ -32,7 +32,7 @@ def index(request):
 		form = CityForm()
 	cur_weather = get_cur_weather()
 	
-	url 	= 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=0a2fad4d1a793d6c2d3cec6944844da2'
+	url 	= "http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid='Your API key'"
 	weather_data = []
 	cities = City.objects.all()
 	# r = requests.get(url.format("tokyo"))
